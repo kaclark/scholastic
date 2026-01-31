@@ -4,7 +4,7 @@ mkdir -p dist/exams
 
 cd src
 
-cp ./main.py ../dist && cp ./pyscript.json ../dist
+cp ./main.py ../dist && cp ./pyscript.json ../dist && cp -r archive ../dist/
 
 COMPILE_TARGETS=$(find . -name "*.typ") 
 
