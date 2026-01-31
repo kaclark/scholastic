@@ -1,0 +1,38 @@
+#container shortcuts
+dcompose:
+	sudo docker compose up
+
+dcompile:
+	sudo docker exec -it scholastic-server-1 bash -c 'cd /var/www/ && bash compile-html.sh'
+
+dcompilepdf:
+	sudo docker exec -it scholastic-server-1 bash -c 'cd /var/www/ && bash compile.sh'
+
+dclean:
+	sudo docker rm scholastic-server-1 
+	sudo docker rmi scholastic-server
+
+quickstart:
+	sudo docker compose -d up #dcompose but modified to be detached
+	sudo docker exec -it scholastic-server-1 bash -c 'cd /var/www/ && bash compile-html.sh' #dcompile
+	qutebrowser http://localhost:9996
+
+#localhost shortcuts
+install_rust:
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs  | sh -s -- -y
+	. "$HOME/.cargo/env"
+
+install:
+	cargo install --locked typst-cli	
+	cargo install simple-http-server
+
+build:
+	bash compile-html.sh
+
+serve:
+	simple-http-server -p 8000 dist/
+
+upload:
+	git add src/*
+	git commit -m "$(msg)"
+	git push
