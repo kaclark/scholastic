@@ -2,7 +2,9 @@
 
 ### MIT Opencourseware materials
 
-For now, all of the archive will be placed in `dist` for static site hosting.
+For now, all of the archive will be placed in `dist` for static site hosting locally but only the exams and problem set pdf have been source controlled to github.
+
+In order to faciliate redirects in the github context, the repo name `scholastic` will be prefixed in the links
 
 In `$PREFIX/resources/lecture-*/` we find an `index.html` and  `data.json`
 
