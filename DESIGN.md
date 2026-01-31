@@ -78,6 +78,8 @@ The very bare beginnings could be an index file with a table with links to the r
 
 Later, adding user accounts for uploading and pooling lecture notes with a backlog of typst/latex conversions on another page would be interesting for community or class engagement.
 
+Maybe to start, the transcript can be used in place of lecture notes?
+
 ### Styling
 * tailwindcss standalone (no nodejs)
 * tailwindcss in `lib.typ` files
